@@ -8,11 +8,6 @@ if (isset($_POST["item_name"])) {
 	 $item_desc = $_POST["item_desc"];
 	 $item_price = $_POST["item_price"];
 
-	// $item_name = array("Peter", "Joe", "Glenn", "Cleveland");
-	// $item_code = array("Peter", "Joe", "Glenn", "Cleveland");
-	// $item_desc = array("Peter", "Joe", "Glenn", "Cleveland");
-	// $item_price = array("Peter", "Joe", "Glenn", "Cleveland");
-
 	$query = '';
 
 	for ($count=0; $count < count($item_name); $count++) { 
