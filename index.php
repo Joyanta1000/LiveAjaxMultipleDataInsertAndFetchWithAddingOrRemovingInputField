@@ -3,17 +3,20 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	
-	
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-<br/><br/>
+<br/>
 <div class="container">
 	<br/>
-	<h2 align="center">Ajax Live Multiple Data Insert And Fetch With Adding Or Removing Input Field</h2>
+	<div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+	<div style="padding-left:60px;"><span class="navbar-brand"><div class="shadow-lg p-3 mb-5 bg-white rounded">Ajax live multiple data insertion and fetching with adding or removing input fields</div></span></div>
+
 	<br/>
 	<div class="table-responsive">
 		<table class="table table-bordered" id="crud_table">
@@ -39,9 +42,12 @@
 			<button type="button" name="save" id="save" class="btn btn-info">Save</button>
 		</div>
 		<br/>
-		<div id="inserted_item_data"></div>
+		<br/>
+		<br/>
+		
 	</div>
-
+</div>
+<div id="inserted_item_data"></div>
 </div>
 </body>
 </html>
@@ -56,7 +62,7 @@
 			html_code += "<td contenteditable='true' class='item_code'></td>";
 			html_code += "<td contenteditable='true' class='item_desc'></td>";
 			html_code += "<td contenteditable='true' class='item_price'></td>";
-			html_code += "<td><button type='button' name='remove' data-row='row"+count+"' class='bt btn-danger btn-xs remove'>-</button></td>";
+			html_code += "<td><button type='button' name='remove' data-row='row"+count+"' class='bt btn-danger btn-xs remove'><i class='icon-remove'></i></button></td>";
 			html_code += "</tr>";
 			$('#crud_table').append(html_code);
 		});

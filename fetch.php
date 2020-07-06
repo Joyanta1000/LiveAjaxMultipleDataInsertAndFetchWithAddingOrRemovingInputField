@@ -7,7 +7,9 @@ $query = "SELECT * FROM `item`";
 $result = mysqli_query($connect, $query);
 $output .= '
 <br/>
-	<h3 align = "center">Item Data</h3>
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+  <span class="navbar-brand"><div class="shadow-lg p-3 mb-5 bg-white rounded">Item</div></span>
+</br>
 		<table class="table table-bordered table-striped">
 			<tr>
 				<th width="30%">Item Name</th>
@@ -26,6 +28,6 @@ while ($row = mysqli_fetch_array($result)) {
 	</tr>
 	';
 }
-$output .= '</table>';
+$output .= '</table></div>';
 echo $output;
 ?>
