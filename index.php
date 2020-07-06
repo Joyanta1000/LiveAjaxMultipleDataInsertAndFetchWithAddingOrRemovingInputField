@@ -13,7 +13,7 @@
 <br/><br/>
 <div class="container">
 	<br/>
-	<h2 align="center">Ajax Multiple Data Insert And Fetch With Adding Or Removing Input Field</h2>
+	<h2 align="center">Ajax Live Multiple Data Insert And Fetch With Adding Or Removing Input Field</h2>
 	<br/>
 	<div class="table-responsive">
 		<table class="table table-bordered" id="crud_table">

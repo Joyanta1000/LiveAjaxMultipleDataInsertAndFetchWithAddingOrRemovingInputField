@@ -16,28 +16,17 @@ if (isset($_POST["item_name"])) {
 	$query = '';
 
 	for ($count=0; $count < count($item_name); $count++) { 
-		$item_name_clean = mysqli_real_escape_string($connect, $item_name[$count]);
-		$item_code_clean = mysqli_real_escape_string($connect, $item_code[$count]);
-		$item_desc_clean = mysqli_real_escape_string($connect, $item_desc[$count]);
-		$item_price_clean = mysqli_real_escape_string($connect, $item_price[$count]);
+		$item_name_data =  $item_name[$count];
+		$item_code_data =  $item_code[$count];
+		$item_desc_data =  $item_desc[$count];
+		$item_price_data = $item_price[$count];
 
-		if ($item_name_clean != '' && $item_code_clean != '' && $item_desc_clean != '' && $item_price_clean != '') {
+		if ($item_name_data != '' && $item_code_data != '' && $item_desc_data != '' && $item_price_data != '') {
 			
-			$query .= 'INSERT INTO `item` (`item_name`, `item_code`, `item_description`, `item_price`) VALUES ("'.$item_name_clean.'","'.$item_code_clean.'" ,"'.$item_desc_clean.'" ,"'.$item_price_clean.'");';
+			$query .= 'INSERT INTO `item` (`item_name`, `item_code`, `item_description`, `item_price`) VALUES ("'.$item_name_data.'","'.$item_code_data.'" ,"'.$item_desc_data.'" ,"'.$item_price_data.'");';
 		}
 	}
-	if ($query != '') {
-		if (mysqli_multi_query($connect, $query)) {
-			echo "Item data inserted";
-		}
-		else
-		{
-			echo "Error";
-		}
-	}
-	else
-	{
-		echo "All fields are required!";
-	}
+		mysqli_multi_query($connect, $query);	
+	
 }
 ?>
